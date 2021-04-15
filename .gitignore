@@ -16,3 +16,4 @@ benchmarks/*/*sender
 tags
 *a.out
 docs/latex
+.history/

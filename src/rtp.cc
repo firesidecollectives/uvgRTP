@@ -20,7 +20,10 @@ uvgrtp::rtp::rtp(rtp_format_t fmt):
 {
     seq_  = uvgrtp::random::generate_32() & 0xffff;
     ts_   = uvgrtp::random::generate_32();
-    ssrc_ = uvgrtp::random::generate_32();
+    // TODO: update interface to override ssrc. for now keeping static as 1111
+    // ssrc_ = uvgrtp::random::generate_32();
+    ssrc_ = 1111;
+
 
     set_payload(fmt);
     set_payload_size(MAX_PAYLOAD);
