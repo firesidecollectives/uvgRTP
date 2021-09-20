@@ -58,6 +58,11 @@ void uvgrtp::rtp::set_payload(rtp_format_t fmt)
             clock_rate_ = 48000;
             break;
 
+        case RTP_FORMAT_PCMA:
+        case RTP_FORMAT_PCMU:
+            clock_rate_ = 48000;
+            break;
+
         default:
             LOG_WARN("Unknown RTP format, setting clock rate to 10000");
             clock_rate_ = 10000;

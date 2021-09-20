@@ -83,7 +83,9 @@ typedef enum RTP_ERROR {
  * \brief These flags are given to uvgrtp::session::create_stream()
  */
 typedef enum RTP_FORMAT {
-    RTP_FORMAT_GENERIC = 0,   ///< Generic format
+    RTP_FORMAT_GENERIC = 256,   ///< Generic format
+    RTP_FORMAT_PCMU    = 0,   ///< PCMU format
+    RTP_FORMAT_PCMA    = 8,   ///< PCMA format
     RTP_FORMAT_H264    = 95,  ///< H.264/AVC
     RTP_FORMAT_H265    = 96,  ///< H.265/HEVC
     RTP_FORMAT_H266    = 97,  ///< H.266/VVC

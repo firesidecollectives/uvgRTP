@@ -146,6 +146,8 @@ rtp_error_t uvgrtp::media_stream::create_media(rtp_format_t fmt)
             return RTP_OK;
 
         case RTP_FORMAT_OPUS:
+        case RTP_FORMAT_PCMU:
+        case RTP_FORMAT_PCMA:
         case RTP_FORMAT_GENERIC:
             if (!(media_ = new uvgrtp::formats::media(socket_, rtp_, ctx_config_.flags)))
                 return RTP_MEMORY_ERROR;
